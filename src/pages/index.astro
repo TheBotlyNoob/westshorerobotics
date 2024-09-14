@@ -1,0 +1,39 @@
+---
+import Layout from "@l/Layout.astro";
+import Timeline from "~/components/Timeline.astro";
+
+const title = "West Shore Robotics.";
+---
+
+<Layout title={title}>
+  <main>
+    <div class="hero bg-base-200 min-h-[80vh]">
+      <div class="hero-content text-center">
+        <div class="max-w-md">
+          <h1 class="text-5xl font-bold">{title}</h1>
+          <p class="py-6">
+            West Shore is already a leading school in Florida, so
+            <br />
+            why not give it an FTC team?
+          </p>
+          <a href="#plan" class="btn btn-primary">See Our Plan</a>
+        </div>
+      </div>
+    </div>
+
+    <h1>Timeline</h1>
+
+    <Timeline
+      items={[
+        { title: "Abc", date: "1985", description: "ABC", done: true },
+        {
+          title: "Getting Access to 3d Printers",
+          date: "1986",
+          description:
+            "A 3d printer is really important to FTC. Mr. Kelly should be able to help out wiht this.",
+          done: false,
+        },
+      ]}
+    />
+  </main>
+</Layout>
