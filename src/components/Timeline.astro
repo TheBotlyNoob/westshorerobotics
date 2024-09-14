@@ -12,7 +12,7 @@ const { items } = Astro.props;
   class="timeline timeline-snap-icon max-md:timeline-compact timeline-vertical"
 >
   {
-    items.map(({ title, date, description, done }, i) => (
+    items.map(({ title, date, description, done }) => (
       <li>
         <hr class={done ? "bg-primary" : ""} />
         <div class="timeline-middle">
