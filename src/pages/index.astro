@@ -17,23 +17,27 @@ const title = "West Shore FTC";
         <Circuits />
       </div>
       <div class="hero-content text-center">
-        <div class="card glass w-xl">
-          <figure><img src="" /></figure>
+        <div class="card backdrop-blur-lg">
           <div class="card-body items-center text-center">
             <h2 class="card-title text-center">{title}</h2>
-            <p class="text-xl my-5">
+            <p class="text-2xl my-5">
               West Shore is already a leading school in Florida.
               <br />
               <span
-                >So why not give it an <a
-                  href="</a>"
-                  class="link link-secondary"
+                >So why not give it a <a
+                  href="https://www.firstinspires.org/robotics/ftc/what-is-first-tech-challenge"
+                  target="_blank"
+                  class="link link-primary"
                   ><span class="italic">FIRST</span>® Tech Challenge</a
                 > team?
               </span>
             </p>
             <div class="card-actions justify-end">
-              <button class="btn btn-lg btn-primary">See Our Plan</button>
+              <a
+                href="https://forms.gle/qSkgbeSawwX8rXrK6"
+                target="_blank"
+                class="btn btn-lg btn-primary">Show Your Interest</a
+              >
             </div>
           </div>
         </div>
@@ -46,14 +50,39 @@ const title = "West Shore FTC";
       </div>
     </div>
 
-    <h2>Timeline</h2>
+    <h2>Why should I join FTC?</h2>
+
+    <p class="text-center md:m-auto md:w-1/2">
+      <strong class="text-bold">Because its fun, of course!</strong> There are also
+      a bunch of different things you can do in the team other than just programming
+      and building. Not only that, but <strong class="text-bold"
+        >you don't need any experience!</strong
+      > This is a learning experience, and you'll probably learn a lot—I don't expect
+      many of you to have experience either, if I'm being honest. It can also help
+      you on college applications, or learn something useful for your future career.
+    </p>
+
+    <h2>Team Roles</h2>
+
+    <p class="text-center md:m-auto md:w-1/2">
+      I want to make a more in-depth breakdown of the different roles. Right now
+      I don't really have the time, so take <a
+        class="link link-primary"
+        href="ftc-possible-roles.pdf"
+      >
+        a look at this PDF for a bare-bones description of roles.
+      </a> This isn't exactly an exhaustive list, and if there's something you'd
+      prefer to do that isn't on that list, just say so.
+    </p>
+
+    <h2>Team Start Plan</h2>
 
     <Timeline
       items={[
         {
           title: "Make a Schedule",
           description:
-            "The current schedule is planned to be Tuesdays and Thursdays all of Power Hour plus Wednesday after school for an hour. However, this can change, as with everything here.",
+            "The current schedule is planned to be Tuesdays and Thursdays all of Power Hour. However, this can change, as with everything here.",
           done: true,
         },
         {
@@ -79,15 +108,6 @@ const title = "West Shore FTC";
       ]}
     />
 
-    <h2>Team Roles</h2>
-
-    <h3>Builder</h3>
-
-    <p class="mx-24">
-      This is the most thought of role when someone thinks of FTC (other than
-      maybe programming).
-    </p>
-
     <style lang="scss">
       h1,
       h2,
@@ -95,7 +115,7 @@ const title = "West Shore FTC";
       h4,
       h5,
       h6 {
-        @apply font-bold text-center my-8;
+        @apply font-bold text-center mb-8 mt-10;
       }
       h1 {
         @apply text-5xl;
@@ -114,7 +134,10 @@ const title = "West Shore FTC";
           1px 1px 0 #000;
       }
       html {
-        @apply text-lg;
+        @apply text-lg md:text-xl;
+      }
+      body {
+        @apply px-4;
       }
 
       .blur-bottom {

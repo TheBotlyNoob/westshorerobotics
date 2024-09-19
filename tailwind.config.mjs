@@ -11,6 +11,6 @@ export default {
   },
   plugins: [require("daisyui")],
   daisyui: {
-    themes: [catppuccin("macchiato")],
+    themes: [catppuccin("latte")],
   },
 };
