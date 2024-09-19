@@ -1,39 +1,97 @@
 ---
 import Layout from "@l/Layout.astro";
+import Circuits from "~/components/Circuits.astro";
 import Timeline from "~/components/Timeline.astro";
+
+import { Icon } from "astro-icon/components";
 
 const title = "West Shore Robotics.";
 ---
 
 <Layout title={title}>
   <main>
-    <div class="hero bg-base-200 min-h-[80vh]">
+    <div class="hero min-h-screen mb-24">
+      <Circuits />
+      <div class="hero-overlay"></div>
       <div class="hero-content text-center">
-        <div class="max-w-md">
-          <h1 class="text-5xl font-bold">{title}</h1>
-          <p class="py-6">
-            West Shore is already a leading school in Florida, so
-            <br />
-            why not give it an FTC team?
-          </p>
-          <a href="#plan" class="btn btn-primary">See Our Plan</a>
+        <div class="card glass w-lg">
+          <div class="card-body items-center text-center">
+            <h2 class="card-title text-center">{title}</h2>
+            <p class="font-bold text-xl my-10">
+              West Shore is already a leading school in Florida.
+              <br />
+              <span>So why not give it an FTC team?</span>
+            </p>
+            <div class="card-actions justify-end">
+              <button class="btn btn-lg btn-primary">See Our Plan</button>
+            </div>
+          </div>
         </div>
+
+        <Icon name="fa:arrow-down" class="absolute bottom-8" size={28} />
       </div>
     </div>
 
-    <h1>Timeline</h1>
+    <h2>Timeline</h2>
 
     <Timeline
       items={[
-        { title: "Abc", date: "1985", description: "ABC", done: true },
         {
-          title: "Getting Access to 3d Printers",
-          date: "1986",
+          title: "Make a Schedule",
           description:
-            "A 3d printer is really important to FTC. Mr. Kelly should be able to help out wiht this.",
-          done: false,
+            "The current schedule is planned to be Tuesdays and Thursdays all of Power Hour plus Wednesday after school for an hour. However, this can change, as with everything here.",
+          done: true,
+        },
+        {
+          title: "Get Access to 3D Printers",
+          description:
+            "FTC is dependent on being able to create custom parts with CNC machines/3D printers.\nMr. Kelly has one, so maybe he's the one to ask.",
+        },
+        {
+          title: "Get Grants from Local Companies",
+          description:
+            "This is one of the more difficult things to do. I hope the companies are generous.",
+        },
+        {
+          title: "Get Initial Supplies",
+          description:
+            "This consists of an FTC starter pack that has all the materials for a team. With money, this isn't a very difficult step.",
+        },
+        {
+          title: "Starting the Club/Initial Meet",
+          description:
+            "In the inital meet, I'll probably explain everything that's said here. However, in my opinion, its still a long ways away.",
         },
       ]}
     />
+
+    <h2>Team Roles</h2>
+
+    <style lang="scss">
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        @apply font-bold text-center m-6;
+      }
+      h1 {
+        @apply text-5xl;
+      }
+      h2 {
+        @apply text-4xl;
+      }
+      h3 {
+        @apply text-3xl;
+      }
+      .text-outline {
+        text-shadow:
+          -1px -1px 0 #000,
+          1px -1px 0 #000,
+          -1px 1px 0 #000,
+          1px 1px 0 #000;
+      }
+    </style>
   </main>
 </Layout>

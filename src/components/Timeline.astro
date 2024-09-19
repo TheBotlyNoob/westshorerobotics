@@ -2,7 +2,7 @@
 import { Icon } from "astro-icon/components";
 
 interface Props {
-  items: { title: string; date: string; description: string; done: boolean }[];
+  items: { title: string; description: string; done?: boolean }[];
 }
 
 const { items } = Astro.props;
@@ -12,21 +12,20 @@ const { items } = Astro.props;
   class="timeline timeline-snap-icon max-md:timeline-compact timeline-vertical"
 >
   {
-    items.map(({ title, date, description, done }) => (
+    items.map(({ title, description, done }, i, arr) => (
       <li>
-        <hr class={done ? "bg-primary" : ""} />
+        {i === 0 ? <></> : <hr class={done ? "bg-primary" : ""} />}
         <div class="timeline-middle">
           <Icon
             name="fa:check-circle"
             class:list={["h-5", "w-5", done ? "text-primary" : ""]}
           />
         </div>
-        <div class="timeline-start mb-10 md:text-end">
-          <time class="font-mono italic">{date}</time>
+        <div class="timeline-start max-w-md mb-10 mr-4 md:text-end">
           <div class="text-lg font-black">{title}</div>
           {description}
         </div>
-        <hr />
+        {arr[i + 1] ? <hr class={arr[i + 1]!.done ? "bg-primary" : ""} /> : <></>}
       </li>
     ))
   }
