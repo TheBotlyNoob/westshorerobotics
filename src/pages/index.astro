@@ -9,12 +9,15 @@ const title = "West Shore Robotics.";
 ---
 
 <Layout title={title}>
-  <main>
+  <main class="text-bold">
     <div class="hero min-h-screen mb-24">
-      <Circuits />
-      <div class="hero-overlay"></div>
+      <div
+        class="blur-bottom inline m-0 p-0 w-full h-screen overflow-hidden relative"
+      >
+        <Circuits />
+      </div>
       <div class="hero-content text-center">
-        <div class="card glass w-lg">
+        <div class="card glass w-xl">
           <div class="card-body items-center text-center">
             <h2 class="card-title text-center">{title}</h2>
             <p class="font-bold text-xl my-10">
@@ -28,7 +31,11 @@ const title = "West Shore Robotics.";
           </div>
         </div>
 
-        <Icon name="fa:arrow-down" class="absolute bottom-8" size={28} />
+        <Icon
+          name="fa:arrow-down"
+          class="absolute bottom-2 md:bottom-8"
+          size={28}
+        />
       </div>
     </div>
 
@@ -67,6 +74,10 @@ const title = "West Shore Robotics.";
 
     <h2>Team Roles</h2>
 
+    <h3>Builder</h3>
+
+    <p>This is the most thought of role.</p>
+
     <style lang="scss">
       h1,
       h2,
@@ -74,7 +85,7 @@ const title = "West Shore Robotics.";
       h4,
       h5,
       h6 {
-        @apply font-bold text-center m-6;
+        @apply font-bold text-center my-8;
       }
       h1 {
         @apply text-5xl;
@@ -91,6 +102,12 @@ const title = "West Shore Robotics.";
           1px -1px 0 #000,
           -1px 1px 0 #000,
           1px 1px 0 #000;
+      }
+
+      .blur-bottom {
+        box-shadow: 0 0 5px 10px theme("colors.base-200");
+        -webkit-mask: linear-gradient(white, transparent);
+        mask: linear-gradient(white, white 70%, transparent 95%);
       }
     </style>
   </main>

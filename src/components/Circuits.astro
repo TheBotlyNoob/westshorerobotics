@@ -2,8 +2,7 @@
   .circuit-path {
     z-index: -9;
     opacity: 0.7;
-    width: 200%;
-    height: 200%;
+    overflow: hidden;
   }
   .path {
     animation: draw 20s infinite;
@@ -37,7 +36,7 @@
 
 <!--  Animation by Jennie Yip <a href="https://dribbble.com/jenniesyip" />  -->
 
-<div class="max-w-screen max-h-screen overflow-hidden">
+<div class="m-0 p-0 w-full h-screen overflow-hidden relative">
   <svg
     class="circuit-path"
     width="2400px"

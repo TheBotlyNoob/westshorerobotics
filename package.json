@@ -21,10 +21,8 @@
     "daisyui": "^4.12.10",
     "prettier": "^3.3.3",
     "prettier-plugin-astro": "^0.14.1",
+    "sass": "^1.79.1",
     "tailwindcss": "^3.4.11",
     "typescript": "^5.6.2"
-  },
-  "devDependencies": {
-    "sass-embedded": "^1.79.1"
   }
 }
