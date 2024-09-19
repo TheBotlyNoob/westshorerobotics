@@ -5,11 +5,11 @@ import Timeline from "~/components/Timeline.astro";
 
 import { Icon } from "astro-icon/components";
 
-const title = "West Shore Robotics.";
+const title = "West Shore FTC";
 ---
 
 <Layout title={title}>
-  <main class="text-bold">
+  <main>
     <div class="hero min-h-screen mb-24">
       <div
         class="blur-bottom inline m-0 p-0 w-full h-screen overflow-hidden relative"
@@ -18,12 +18,19 @@ const title = "West Shore Robotics.";
       </div>
       <div class="hero-content text-center">
         <div class="card glass w-xl">
+          <figure><img src="" /></figure>
           <div class="card-body items-center text-center">
             <h2 class="card-title text-center">{title}</h2>
-            <p class="font-bold text-xl my-10">
+            <p class="text-xl my-5">
               West Shore is already a leading school in Florida.
               <br />
-              <span>So why not give it an FTC team?</span>
+              <span
+                >So why not give it an <a
+                  href="</a>"
+                  class="link link-secondary"
+                  ><span class="italic">FIRST</span>® Tech Challenge</a
+                > team?
+              </span>
             </p>
             <div class="card-actions justify-end">
               <button class="btn btn-lg btn-primary">See Our Plan</button>
@@ -76,7 +83,10 @@ const title = "West Shore Robotics.";
 
     <h3>Builder</h3>
 
-    <p>This is the most thought of role.</p>
+    <p class="mx-24">
+      This is the most thought of role when someone thinks of FTC (other than
+      maybe programming).
+    </p>
 
     <style lang="scss">
       h1,
@@ -102,6 +112,9 @@ const title = "West Shore Robotics.";
           1px -1px 0 #000,
           -1px 1px 0 #000,
           1px 1px 0 #000;
+      }
+      html {
+        @apply text-lg;
       }
 
       .blur-bottom {

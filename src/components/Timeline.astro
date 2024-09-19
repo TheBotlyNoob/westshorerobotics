@@ -9,7 +9,7 @@ const { items } = Astro.props;
 ---
 
 <ul
-  class="timeline timeline-snap-icon max-md:timeline-compact timeline-vertical"
+  class="timeline timeline-snap-icon timeline-vertical"
 >
   {
     items.map(({ title, description, done }, i, arr) => (
@@ -21,7 +21,7 @@ const { items } = Astro.props;
             class:list={["h-5", "w-5", done ? "text-primary" : ""]}
           />
         </div>
-        <div class="timeline-start max-w-md mb-10 mr-4 md:text-end">
+        <div class="timeline-end max-w-md mb-10 ml-4 md:text-start">
           <div class="text-lg font-black">{title}</div>
           {description}
         </div>
