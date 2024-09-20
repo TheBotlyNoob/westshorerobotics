@@ -18,6 +18,13 @@ const PATH_BASE: string = (import.meta.env as unknown as { BASE_URL: string })
     <base href={PATH_BASE + "/"} target="_blank" />
     <meta name="description" content="West Shore FTC Team" />
     <meta name="viewport" content="width=device-width" />
+
+    <meta name="og:title" content="West Shore FTC Team" />
+    <meta
+      name="og:description"
+      content="Are you even kinda interested in robotics? Check out the FTC team!"
+    />
+
     <link rel="icon" type="image/svg+xml" href="favicon.svg" />
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
